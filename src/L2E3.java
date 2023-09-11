@@ -25,9 +25,7 @@ public class L2E3 {
         System.out.println("Price of item 3");
         float price3 = input.nextFloat();
 
-        float subtotal = 0;
-
-        subtotal = price1 + price2 + price3;
+       float subtotal = price1 + price2 + price3;
 
         System.out.println("NESMART");
         System.out.format("\nItem 1 " + name1 + " £%.2f", price1);
