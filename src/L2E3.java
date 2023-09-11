@@ -30,10 +30,10 @@ public class L2E3 {
         subtotal = price1 + price2 + price3;
 
         System.out.println("NESMART");
-        System.out.println("Item 1 " + name1 + " £" + price1);
-        System.out.println("Item 2 " + name2 + " £" + price2);
-        System.out.println("Item 3 " + name3 + " £" + price3 + "\n" + "SUBTOTAL.." + "£" + subtotal);
-
+        System.out.format("\nItem 1 " + name1 + " £%.2f", price1);
+        System.out.format("\nItem 2 " + name2 + " £%.2f", price2);
+        System.out.format("\nItem 3 " + name3 + " £%.2f", price3);
+        System.out.println("\nSUBTOTAL..£" + subtotal);
     }
 
 }
