@@ -12,27 +12,29 @@ public class L3e3 {
         System.out.println("What is the interest rate of the loan?");
         int interestRate = input.nextInt();
         System.out.println("What is number of years of the loan?");
-        int years = input.nextInt();
+        float years = input.nextInt();
 
-        int interestMonth = interestRate/12;
+        float interestMonth = interestRate/12;
 
-        int years12 = years*12;
+        float years12 = years*12;
 
-        int negyears12 = -years12;
+        float negyears12 = -years12;
 
-        int amountInterest = amount + interestMonth;
+        float amountInterest = amount + interestMonth;
 
 
 
-        int variable = Math.pow(amountInterest,negyears12);
+        float variable = (float)Math.pow(amountInterest,negyears12);
 
-        int monthlypay = amount*(interestMonth/(amount - variable));
+        float monthlypay = amount*(interestMonth/(amount - variable));
 
-    //    System.out.println("Loan amount: " + amount);
+        System.out.println("Loan amount: " + amount);
 
-     //   System.out.println("Interest rate APR%: " + interestRate);
+        System.out.println("Interest rate APR%: " + interestRate);
 
-      //  System.out.println("Number of years")
+        System.out.println("Number of years" + years);
+
+        System.out.println("Monthly Pay: £" + monthlypay);
 
 
     }
