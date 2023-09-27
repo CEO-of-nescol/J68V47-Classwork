@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class L3e2 {
+class l4e2 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
