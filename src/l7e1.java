@@ -8,6 +8,15 @@ public class l7e1 {
         System.out.println(message);
     }
 
+    public static void option1(){
+        System.out.println("HELLO!");
+    }
+    public static void option2(){
+        System.out.println("The time is now.");
+    }
+    public static void option3(){
+        System.out.println("Knock knock. Who's there? ....... long pause ........ Java");
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int option;
@@ -25,11 +34,11 @@ public class l7e1 {
 
             System.out.format("You chose option %d %n", option);
             if (option == 1){
-                message("HELLO!");
+                option1();
             } else if (option == 2){
-                message("The time is now.");
+                option2();
             } else if (option == 3){
-                message("Knock knock. Who's there? ....... long pause ........ Java");
+                option3();
             } else if (option == 4){
                 message("Bye!");
             } else {
