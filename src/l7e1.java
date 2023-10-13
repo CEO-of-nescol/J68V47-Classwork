@@ -7,13 +7,11 @@ public class l7e1 {
     public static void message(String message){
         System.out.println(message);
     }
-public static void getOption(){
-
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int option;
+
         do {
             message("Menu");
             message("1. Say hello");
@@ -23,7 +21,8 @@ public static void getOption(){
 
             message("Input an option (1-4): ");
 
-            option = scanner.nextInt();
+            option = getOption();
+
             System.out.format("You chose option %d %n", option);
             if (option == 1){
                 message("HELLO!");
@@ -42,5 +41,11 @@ public static void getOption(){
 
     }
 
-
+    private static int getOption() {
+        Scanner input = new Scanner(System.in);
+        int option = input.nextInt();
+        return option;
     }
+
+
+}
