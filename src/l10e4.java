@@ -14,8 +14,9 @@ public class l10e4 {
 
             String line1 = in.readLine();
             while (line1 != null) {
-                line1 = in.readLine();
-
+                line1 = line1 + in.readLine();
+                System.out.println(line1);
+                line1 = null;
             }
         } catch (IOException e) {
             System.out.println("Error occurred writing to file: " + e.toString());}
@@ -24,14 +25,21 @@ public class l10e4 {
             BufferedReader in = new BufferedReader(new FileReader(file2));
             String line2 = in.readLine();
             while (line2 != null) {
-                line2 = in.readLine();
+                line2 = line2 + in.readLine();
+                String fileCont = line2;
+                System.out.println(line2);
+                line2 = null;
 
             }
+
+
 
         } catch (IOException e) {
             System.out.println("Error occurred writing to file: " + e.toString());
 
         }
+
+
 
 
     }
