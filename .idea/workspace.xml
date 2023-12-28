@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a12e6862-7451-4287-882b-e9d679c5ca3f" name="Changes" comment="l2e3 done">
+    <list default="true" id="a12e6862-7451-4287-882b-e9d679c5ca3f" name="Changes" comment="FUNctions">
+      <change afterPath="$PROJECT_DIR$/alcohol_unit_values.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prototypev2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/L3e3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/L3e3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -101,7 +109,10 @@
       <workItem from="1693417086871" duration="624000" />
       <workItem from="1694162240337" duration="1520000" />
       <workItem from="1694451399216" duration="1499000" />
-      <workItem from="1694690899703" duration="2221000" />
+      <workItem from="1694690899703" duration="2321000" />
+      <workItem from="1699973653172" duration="4902000" />
+      <workItem from="1700158999974" duration="4346000" />
+      <workItem from="1703794773529" duration="5956000" />
     </task>
     <task id="LOCAL-00001" summary="l2e2">
       <option name="closed" value="true" />
@@ -127,7 +138,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694453360725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="l3e3 what even is a double">
+      <option name="closed" value="true" />
+      <created>1694693170181</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694693170181</updated>
+    </task>
+    <task id="LOCAL-00005" summary="FUNctions">
+      <option name="closed" value="true" />
+      <created>1699995013090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699995013090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="FUNctions">
+      <option name="closed" value="true" />
+      <created>1700171630239</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700171630239</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +195,8 @@
     <MESSAGE value="l2e2" />
     <MESSAGE value="l2e3" />
     <MESSAGE value="l2e3 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="l2e3 done" />
+    <MESSAGE value="l3e3 what even is a double" />
+    <MESSAGE value="FUNctions" />
+    <option name="LAST_COMMIT_MESSAGE" value="FUNctions" />
   </component>
 </project>

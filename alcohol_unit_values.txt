@@ -1,0 +1,11 @@
+Vodka, 0.8
+Rum, 1.2
+Wine, 0.5
+Beer, 0.3
+Whiskey, 1.5
+Tequila, 1.0
+Gin, 0.7
+Brandy, 1.3
+Champagne, 0.6
+Cider, 0.4
+Sake, 0.9
