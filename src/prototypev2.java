@@ -1,3 +1,7 @@
+//ALCOlator
+//29/12/2023
+//Mateusz Siwiec
+
 
 import java.util.Scanner;
 import java.io.File;
@@ -12,6 +16,32 @@ public class prototypev2 {
             displayMenu();
         }
 
+        private static void manualCalculator(){
+
+            System.out.println("Manual Calculator\n");
+            System.out.println("1. Add drink");
+            System.out.println("2. How many units have I drank?");
+            System.out.println("3. Return to main menu");
+
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    addDrinkManual();
+                    break;
+                case 2:
+                    getTotalUnitsDrank();
+                    break;
+                case 3:
+                    displayMenu();
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please select a valid option.");
+                    break;
+            }
+        }
+
         private static void displayMenu() {
             System.out.println("ALCOlator");
             System.out.println("You must be 18+ to buy alcohol, do not drink and drive, drink responsibly");
@@ -19,7 +49,7 @@ public class prototypev2 {
 
             System.out.println("Select Menu Option 1-5\n");
             System.out.println("1. How many Units have I drank?");
-            System.out.println("2. Add drink");
+            System.out.println("2. Manual calculator");
             System.out.println("3. How long until I'm sober?");
             System.out.println("4. Show alcohol unit values");
             System.out.println("5. Show safe drinking tips");
@@ -32,7 +62,7 @@ public class prototypev2 {
                     getTotalUnitsDrank();
                     break;
                 case 2:
-                    addDrink();
+                    manualCalculator();
                     break;
                 case 3:
                     calculateTimeToSober();
@@ -60,22 +90,22 @@ public class prototypev2 {
             displayMenu();
         }
 
-        private static void addDrink() {
+        private static void addDrinkManual() {
             System.out.println("Select a drink:");
             // Read the list of alcohols from a text file and display them here
 
-            // For simplicity, let's assume the user selects a drink with ABV and volume
+
             System.out.println("Enter the ABV% of the drink:");
             double abv = new Scanner(System.in).nextDouble();
 
             System.out.println("Enter the volume of the drink in milliliters:");
             int volume = new Scanner(System.in).nextInt();
 
-            double drinkUnits = (abv * volume) / 1000;
+            double drinkUnits = (abv*volume)/1000;
             unitsDrank += drinkUnits;
 
             System.out.println("Added " + drinkUnits + " units to total units drank.");
-            displayMenu();
+            manualCalculator();
         }
 
         private static void calculateTimeToSober() {
