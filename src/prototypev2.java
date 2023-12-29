@@ -92,7 +92,7 @@ public class prototypev2 {
 
         private static void addDrinkManual() {
             System.out.println("Select a drink:");
-            // Read the list of alcohols from a text file and display them here
+            //Read the list of alcohols from a text file and displays them
 
 
             System.out.println("Enter the ABV% of the drink:");
@@ -112,21 +112,20 @@ public class prototypev2 {
             System.out.println("Enter the number of units you have drunk:");
             double units = new Scanner(System.in).nextDouble();
 
-            double timeToSober = units * 1; // You may replace this with a more accurate formula
+            double timeToSober = units * 1;
             System.out.println("It will take approximately " + timeToSober + " hours to become sober.");
             displayMenu();
         }
 
         private static void showAlcoholUnitValues() {
-            // Read and display alcohol unit values from a text file
-            // For simplicity, let's assume you have a method to read and print the values
+            //Read and display alcohol unit values, their name, and the unit size from a text file
             System.out.println("List of alcohol unit values:");
             readAlcoholUnitValuesFromFile();
             displayMenu();
         }
 
         private static void showSafeDrinkingTip() {
-            // Display a random safe drinking tip from the array
+            //display a random safe drinking tip from the array
             String[] tips = {
                     "Hydrate Between Drinks: Alternate alcoholic beverages with water to stay hydrated and pace yourself.",
                     "Eat Before Drinking: Consuming a meal before drinking helps slow down alcohol absorption.",
