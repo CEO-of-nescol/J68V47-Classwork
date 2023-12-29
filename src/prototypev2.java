@@ -129,7 +129,7 @@ public class prototypev2 {
 
         private static void readAlcoholUnitValuesFromFile() {
             try {
-                File file = import File("alcohol_unit_values.txt");
+                File file = new File("alcohol_unit_values.txt");
                 Scanner scanner = new Scanner(file);
 
                 while (scanner.hasNextLine()) {
