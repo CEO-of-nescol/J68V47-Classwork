@@ -90,7 +90,8 @@ public class prototypev2 {
             displayMenu();
         }
 
-        private static void addDrinkManual() {
+        private static void pickDrinkList() {  }
+    private static void addDrinkManual() {
             System.out.println("Select a drink:");
             //Read the list of alcohols from a text file and displays them
 
