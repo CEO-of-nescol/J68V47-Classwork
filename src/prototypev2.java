@@ -1,8 +1,6 @@
 //ALCOlator
 //29/12/2023
 //Mateusz Siwiec
-
-
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -59,7 +57,7 @@ public class prototypev2 {
 
             switch (choice) {
                 case 1:
-                    getTotalUnitsDrank();
+                    pickDrinkList();
                     break;
                 case 2:
                     manualCalculator();
@@ -80,20 +78,43 @@ public class prototypev2 {
         }
 
         private static void getTotalUnitsDrank() {
-
-            Scanner scanner = new Scanner(System.in);
-            int choice = scanner.nextInt();
-            switch (choice) {
-
-            }
             System.out.println("Total units drank: " + unitsDrank);
             displayMenu();
         }
 
-        private static void pickDrinkList() {  }
+        private static void pickDrinkList() {
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+
+
+                default:
+                    System.out.println("Invalid choice. Please select a valid option.");
+                    break;
+            }
+
+        }
+        private static void addDrink(){
+            try {
+                File file = new File("alcohol_unit_values.txt");
+                Scanner scanner = new Scanner(file);
+
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    System.out.println(line);
+                }
+
+                scanner.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("Error reading alcohol unit values from the file.");
+            }
+
+        }
+
     private static void addDrinkManual() {
             System.out.println("Select a drink:");
-            //Read the list of alcohols from a text file and displays them
+            //Reads the list of alcohols from a text file and displays them
 
 
             System.out.println("Enter the ABV% of the drink:");
