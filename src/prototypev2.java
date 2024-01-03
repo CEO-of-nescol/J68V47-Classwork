@@ -1,6 +1,7 @@
 //ALCOlator
 //29/12/2023
 //Mateusz Siwiec
+//Special thanks to Emily Michaela Peel for calling me so I work on this project
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -79,6 +80,15 @@ public class prototypev2 {
 
         private static void getTotalUnitsDrank() {
             System.out.println("Total units drank: " + unitsDrank);
+
+            if (unitsDrank > 14){
+                System.out.println("You have drank over the weekly 14 unit recommendation, reduce your alcohol intake ");
+            }
+            else{
+                System.out.println("You are under the 14 unit recommendation, good!");
+            }
+
+
             displayMenu();
         }
 
