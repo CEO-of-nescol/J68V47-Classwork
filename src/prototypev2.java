@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
+import java.util.*;
 
 public class prototypev2 {
 
@@ -43,7 +44,7 @@ public class prototypev2 {
 
         private static void displayMenu() {
             System.out.println("ALCOlator");
-            System.out.println("You must be 18+ to buy alcohol, do not drink and drive, drink responsibly");
+            System.out.println("You must be 18+ to buy alcohol, do not drink and drive, drink responsibly\n");
             System.out.println("It’s recommended to drink no more than 14 units of alcohol a week spread across 3 days or more\n");
 
             System.out.println("Select Menu Option 1-5\n");
@@ -97,8 +98,14 @@ public class prototypev2 {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-
-
+                    addDrink();
+                    break;
+                case 2:
+                    getTotalUnitsDrank();
+                    break;
+                case 3:
+                    displayMenu();
+                    break;
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
                     break;
@@ -110,11 +117,18 @@ public class prototypev2 {
                 File file = new File("alcohol_unit_values.txt");
                 Scanner scanner = new Scanner(file);
 
+                List<String> alcohols= new ArrayList<String>();
+
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
-                    System.out.println(line);
+                    alcohols.add(line);
+                    for (int count = 1; count <= 9; count += 1) {
+
+
+                    }
                 }
 
+                System.out.println(alcohols);
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("Error reading alcohol unit values from the file.");
