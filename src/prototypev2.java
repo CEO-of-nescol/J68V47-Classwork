@@ -11,6 +11,7 @@ import java.util.*;
 public class prototypev2 {
 
         private static double unitsDrank = 0;
+    Double[] unitArray = {1.0,1.5,1.5,1.7,2.4,2.0,2.1,3.0,3.0};
 
         public static void main(String[] args) {
             displayMenu();
@@ -112,27 +113,48 @@ public class prototypev2 {
             }
 
         }
-        private static void addDrink(){
+
+
+    private static void addDrink(){
+
             try {
                 File file = new File("alcohol_unit_values.txt");
                 Scanner scanner = new Scanner(file);
 
-                List<String> alcohols= new ArrayList<String>();
-
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
-                    alcohols.add(line);
-                    for (int count = 1; count <= 9; count += 1) {
-
-
-                    }
+                    System.out.println(line);
                 }
 
-                System.out.println(alcohols);
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("Error reading alcohol unit values from the file.");
             }
+
+
+
+      //      try {
+    //            File file = new File("alcohol_unit_values.txt");
+  //              Scanner scanner = new Scanner(file);
+
+
+//                List<String> alcohols= new ArrayList<String>();
+
+               // while (scanner.hasNextLine()) {
+                //    String line = scanner.nextLine();
+              //      alcohols.add(line);
+            //        for (int count = 1; count <= 9; count += 1) {
+
+
+          //          }
+        //        }
+
+      //          System.out.println(alcohols);
+    //            scanner.close();
+  //          } catch (FileNotFoundException e) {
+//                System.out.println("Error reading alcohol unit values from the file.");
+//            }
+
 
         }
 
