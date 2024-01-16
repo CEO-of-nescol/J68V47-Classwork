@@ -22,3 +22,25 @@ public class Project_prototypes {
         System.out.print(soberTime);
     }
 }
+//      try {
+//            File file = new File("alcohol_unit_values.txt");
+//              Scanner scanner = new Scanner(file);
+
+
+//                List<String> alcohols= new ArrayList<String>();
+
+// while (scanner.hasNextLine()) {
+//    String line = scanner.nextLine();
+//      alcohols.add(line);
+//        for (int count = 1; count <= 9; count += 1) {
+
+
+//          }
+//        }
+
+//          System.out.println(alcohols);
+//            scanner.close();
+//          } catch (FileNotFoundException e) {
+//                System.out.println("Error reading alcohol unit values from the file.");
+//            }
+

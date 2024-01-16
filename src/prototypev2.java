@@ -6,15 +6,15 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
-import java.util.*;
 
 public class prototypev2 {
 
         private static double unitsDrank = 0;
-
+//initialise unitsDrank variable as a double globally
 
         public static void main(String[] args) {
             displayMenu();
+            //calls the function to display the main menu and offer options to choose for the user
         }
 
         private static void manualCalculator(){
@@ -44,10 +44,11 @@ public class prototypev2 {
         }
 
         private static void displayMenu() {
+//displays warning messages to the user about drinking
             System.out.println("ALCOlator");
             System.out.println("You must be 18+ to buy alcohol, do not drink and drive, drink responsibly\n");
             System.out.println("It’s recommended to drink no more than 14 units of alcohol a week spread across 3 days or more\n");
-
+//displays menu options
             System.out.println("Select Menu Option 1-5\n");
             System.out.println("1. How many Units have I drank?");
             System.out.println("2. Manual calculator");
@@ -57,8 +58,9 @@ public class prototypev2 {
 
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
-
+//recieves input from the user which runs the connected function
             switch (choice) {
+                //switch takes the choice variable and compares it to cases and whichever match it enacts that cases subprogram
                 case 1:
                     pickDrinkList();
                     break;
@@ -77,29 +79,36 @@ public class prototypev2 {
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
                     break;
+                    //if any other input than the cases is given by the user this error message shows
             }
         }
 
         private static void getTotalUnitsDrank() {
             System.out.println("Total units drank: " + unitsDrank);
-
+//displays to the user the text and how many units they have drank by printing unitsDrank
             if (unitsDrank > 14){
                 System.out.println("You have drank over the weekly 14 unit recommendation, reduce your alcohol intake ");
             }
             else{
                 System.out.println("You are under the 14 unit recommendation, good!");
             }
-
-
+//if statement checks if unitsDrank is over 14 and displays a message to drink less to the user, if it is under 14, displays a congratulation message to the user
             displayMenu();
+            //goes back to main menu of the program by calling the displayMenu function
         }
 
         private static void pickDrinkList() {
+            Double[] unitArray = {1.0,1.5,1.5,1.7,2.4,2.0,2.1,3.0,3.0};
+            //initialise the unitArray list as a double
+            System.out.println("1: Add a drink");
+            System.out.println("2: Get the total amount of units drank");
+            System.out.println("3: Main menu");
+            //displays menu options to the user
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    addDrink();
+                    addDrink(unitArray);
                     break;
                 case 2:
                     getTotalUnitsDrank();
@@ -111,52 +120,70 @@ public class prototypev2 {
                     System.out.println("Invalid choice. Please select a valid option.");
                     break;
             }
-
+//same as the main menu displays selection options to the user using a switch
         }
 
 
-    private static void addDrink(){
-        Double[] unitArray = {1.0,1.5,1.5,1.7,2.4,2.0,2.1,3.0,3.0};
+    private static void addDrink(Double[] unitArray){
+//initialises the addDrink function and passes the unitArray variable through the parameters
             try {
                 File file = new File("alcohol_unit_values.txt");
                 Scanner scanner = new Scanner(file);
-
+                int counter = 0;
+                // set counter for numbering each line in text file for user to select later
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
+                    counter = counter + 1;
+                    System.out.print(counter + ": ");
                     System.out.println(line);
                 }
-
+                //prints all lines of the alcohol_unit_values.txt file adding the number of the line at the start of each one
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("Error reading alcohol unit values from the file.");
             }
-
-
-
-      //      try {
-    //            File file = new File("alcohol_unit_values.txt");
-  //              Scanner scanner = new Scanner(file);
-
-
-//                List<String> alcohols= new ArrayList<String>();
-
-               // while (scanner.hasNextLine()) {
-                //    String line = scanner.nextLine();
-              //      alcohols.add(line);
-            //        for (int count = 1; count <= 9; count += 1) {
-
-
-          //          }
-        //        }
-
-      //          System.out.println(alcohols);
-    //            scanner.close();
-  //          } catch (FileNotFoundException e) {
-//                System.out.println("Error reading alcohol unit values from the file.");
-//            }
-
-
+            System.out.println("10: Return to menu");
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                unitsDrank = unitsDrank + unitArray[0];
+                break;
+            case 2:
+                unitsDrank = unitsDrank + unitArray[1];
+                break;
+            case 3:
+                unitsDrank = unitsDrank + unitArray[2];
+                break;
+            case 4:
+                unitsDrank = unitsDrank + unitArray[3];
+                break;
+            case 5:
+                unitsDrank = unitsDrank + unitArray[4];
+                break;
+            case 6:
+                unitsDrank = unitsDrank + unitArray[5];
+                break;
+            case 7:
+                unitsDrank = unitsDrank + unitArray[6];
+                break;
+            case 8:
+                unitsDrank = unitsDrank + unitArray[7];
+                break;
+            case 9:
+                unitsDrank = unitsDrank + unitArray[8];
+                break;
+            case 10:
+                pickDrinkList();
+                break;
+//menu to choose how many units to add to unitsDrank and option to return to the submenu
+            default:
+                System.out.println("Invalid choice, please select a valid option.");
+                break;
         }
+        pickDrinkList();
+        //returns to submenu function when function finishes
+    }
 
     private static void addDrinkManual() {
             System.out.println("Select a drink:");
@@ -194,7 +221,7 @@ public class prototypev2 {
 
         private static void showSafeDrinkingTip() {
             //display a random safe drinking tip from the array
-            String[] tips = {
+            String[] tips = { // tips list is initialised as String datatype
                     "Hydrate Between Drinks: Alternate alcoholic beverages with water to stay hydrated and pace yourself.",
                     "Eat Before Drinking: Consuming a meal before drinking helps slow down alcohol absorption.",
                     "Know Your Limits: Be aware of your alcohol tolerance and stick to a moderate drinking pace.",
@@ -219,7 +246,8 @@ public class prototypev2 {
 
             Random random = new Random();
             int randomIndex = random.nextInt(tips.length);
-
+//takes the length  of the tips list and picks a random number within the length of the list, creates an integer datatype variable
+            //randomIndex and uses that to print a random safe drinking tip to the user using the tips list
             System.out.println("Safe Drinking Tip: " + tips[randomIndex]);
             displayMenu();
         }
