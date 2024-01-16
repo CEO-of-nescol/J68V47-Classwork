@@ -39,6 +39,7 @@ public class prototypev2 {
                     break;
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
+                    manualCalculator();
                     break;
             }
         }
@@ -78,6 +79,7 @@ public class prototypev2 {
                     break;
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
+                    displayMenu();
                     break;
                     //if any other input than the cases is given by the user this error message shows
             }
@@ -118,6 +120,7 @@ public class prototypev2 {
                     break;
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
+                    pickDrinkList();
                     break;
             }
 //same as the main menu displays selection options to the user using a switch
@@ -179,6 +182,7 @@ public class prototypev2 {
 //menu to choose how many units to add to unitsDrank and option to return to the submenu
             default:
                 System.out.println("Invalid choice, please select a valid option.");
+                addDrink(unitArray);
                 break;
         }
         pickDrinkList();
@@ -188,8 +192,6 @@ public class prototypev2 {
     private static void addDrinkManual() {
             System.out.println("Select a drink:");
             //Reads the list of alcohols from a text file and displays them
-
-
             System.out.println("Enter the ABV% of the drink:");
             double abv = new Scanner(System.in).nextDouble();
 
@@ -206,9 +208,11 @@ public class prototypev2 {
         private static void calculateTimeToSober() {
             System.out.println("Enter the number of units you have drunk:");
             double units = new Scanner(System.in).nextDouble();
-
+//gets the amount of units the user has drank using scanner and puts them into initialised variable units, datatype double,
             double timeToSober = units * 1;
+            //initialises timeToSober as a double and is variable units times one
             System.out.println("It will take approximately " + timeToSober + " hours to become sober.");
+            //displays message of how many hours it will take for the user to become sober and returns to main menu using the displayMenu function
             displayMenu();
         }
 
@@ -253,18 +257,20 @@ public class prototypev2 {
         }
 
         private static void readAlcoholUnitValuesFromFile() {
+            //function displays to the user the alcohol_unit_values.txt file
             try {
                 File file = new File("alcohol_unit_values.txt");
                 Scanner scanner = new Scanner(file);
-
+//assigns the file alcohol_unit_values.txt to the File variable file, and uses Scanner to input that to variable scanner
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
                     System.out.println(line);
                 }
-
+//while loop prints every line in the file until there are no more lines using .hasNextLine
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("Error reading alcohol unit values from the file.");
+                //catch to display an error message to the user
             }
         }
     }
