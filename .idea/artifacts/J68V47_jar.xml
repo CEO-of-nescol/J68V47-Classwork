@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="J68V47:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/J68V47_jar</output-path>
+    <root id="root">
+      <element id="directory" name="ALCOlator">
+        <element id="module-output" name="J68V47" />
+      </element>
+    </root>
+  </artifact>
+</component>

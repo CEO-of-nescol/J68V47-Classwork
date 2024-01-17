@@ -1,4 +1,4 @@
-//Alcohol Unit Calculator
+//stored ideas
 //Mateusz Siwiec
 //16/11/2023
 

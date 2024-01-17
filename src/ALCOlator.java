@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 
-public class prototypev2 {
+public class ALCOlator {
 
         private static double unitsDrank = 0;
 //initialise unitsDrank variable as a double globally
