@@ -9,15 +9,27 @@ import java.util.Random;
 
 public class ALCOlator {
 
+
+
         private static double unitsDrank = 0;
+
 //initialise unitsDrank variable as a double globally
 
         public static void main(String[] args) {
+            System.out.println(getName());
             displayMenu();
-            //calls the function to display the main menu and offer options to choose for the user
+            showSafeDrinkingTip();
+//            //calls the function to display the main menu and offer options to choose for the user
         }
 
-        private static void manualCalculator(){
+        public static String getName(){
+            System.out.println("What is your name?");
+            Scanner scanner = new Scanner(System.in);
+            String name = scanner.nextLine();
+            return name;
+        }
+
+        private static void manualCalculator( ){
 
             System.out.println("Manual Calculator\n");
             System.out.println("1. Add drink");
@@ -86,6 +98,8 @@ public class ALCOlator {
         }
 
         private static void getTotalUnitsDrank() {
+
+
             System.out.println("Total units drank: " + unitsDrank);
 //displays to the user the text and how many units they have drank by printing unitsDrank
             if (unitsDrank > 14){
@@ -122,29 +136,30 @@ public class ALCOlator {
                     System.out.println("Invalid choice. Please select a valid option.");
                     pickDrinkList();
                     break;
+
             }
 //same as the main menu displays selection options to the user using a switch
         }
 
-    private static void addDrink(Double[] unitArray){
+    private static void addDrink(Double[] unitArray) {
 //initialises the addDrink function and passes the unitArray variable through the parameters
-            try {
-                File file = new File("alcohol_unit_values.txt");
-                Scanner scanner = new Scanner(file);
-                int counter = 0;
-                // set counter for numbering each line in text file for user to select later
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    counter = counter + 1;
-                    System.out.print(counter + ": ");
-                    System.out.println(line);
-                }
-                //prints all lines of the alcohol_unit_values.txt file adding the number of the line at the start of each one
-                scanner.close();
-            } catch (FileNotFoundException e) {
-                System.out.println("Error reading alcohol unit values from the file.");
+        try {
+            File file = new File("alcohol_unit_values.txt");
+            Scanner scanner = new Scanner(file);
+            int counter = 0;
+            // set counter for numbering each line in text file for user to select later
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                counter = counter + 1;
+                System.out.print(counter + ": ");
+                System.out.println(line);
             }
-            System.out.println("10: Return to menu");
+            //prints all lines of the alcohol_unit_values.txt file adding the number of the line at the start of each one
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error reading alcohol unit values from the file.");
+        }
+        System.out.println("10: Return to menu");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
@@ -200,9 +215,11 @@ public class ALCOlator {
             double drinkUnits = (abv*volume)/1000;
             unitsDrank += drinkUnits;
 //initialise double variable drinkUnits as the calculation abv*volume/1000 then add this to double variable unitsDrank
-            System.out.println("Added " + drinkUnits + " units to total units drank.");
+
             manualCalculator();
+
         }
+
 
         private static void calculateTimeToSober() {
             System.out.println("Enter the number of units you have drunk:");
@@ -249,12 +266,16 @@ public class ALCOlator {
             Random random = new Random();
 //takes the length  of the tips list and picks a random number within the length of the list, creates an integer datatype variable
             //randomIndex and uses that to print a random safe drinking tip to the user using the tips list
-            for (int i = 0; i <3; i++) {
+
+            for (int i = 0; i < 3; i = i + 1) {
                 int randomIndex = random.nextInt(tips.length);
                 System.out.println("Safe Drinking Tip: " + tips[randomIndex]);
+
             }
+
 //for loop to print 3 random tips
             displayMenu();
+
         }
 
         private static void readAlcoholUnitValuesFromFile() {
