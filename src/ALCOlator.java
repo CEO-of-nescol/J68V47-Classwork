@@ -126,7 +126,6 @@ public class ALCOlator {
 //same as the main menu displays selection options to the user using a switch
         }
 
-
     private static void addDrink(Double[] unitArray){
 //initialises the addDrink function and passes the unitArray variable through the parameters
             try {
@@ -194,13 +193,13 @@ public class ALCOlator {
             //Reads the list of alcohols from a text file and displays them
             System.out.println("Enter the ABV% of the drink:");
             double abv = new Scanner(System.in).nextDouble();
-
+// ask for abv of drink to input from user
             System.out.println("Enter the volume of the drink in milliliters:");
             int volume = new Scanner(System.in).nextInt();
-
+// ask for volume of drink from user
             double drinkUnits = (abv*volume)/1000;
             unitsDrank += drinkUnits;
-
+//initialise double variable drinkUnits as the calculation abv*volume/1000 then add this to double variable unitsDrank
             System.out.println("Added " + drinkUnits + " units to total units drank.");
             manualCalculator();
         }
