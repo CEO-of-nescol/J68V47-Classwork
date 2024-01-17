@@ -247,12 +247,14 @@ public class ALCOlator {
                     "Don't Drink and Drive: Never operate a vehicle under the influence. Arrange for alternative transportation.",
                     "Look Out for Friends: Be aware of your friends' well-being and intervene if someone appears to be struggling with alcohol consumption."
             };
-
             Random random = new Random();
-            int randomIndex = random.nextInt(tips.length);
 //takes the length  of the tips list and picks a random number within the length of the list, creates an integer datatype variable
             //randomIndex and uses that to print a random safe drinking tip to the user using the tips list
-            System.out.println("Safe Drinking Tip: " + tips[randomIndex]);
+            for (int i = 0; i <3; i++) {
+                int randomIndex = random.nextInt(tips.length);
+                System.out.println("Safe Drinking Tip: " + tips[randomIndex]);
+            }
+//for loop to print 3 random tips
             displayMenu();
         }
 
