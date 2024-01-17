@@ -16,7 +16,7 @@ public class ALCOlator {
 //initialise unitsDrank variable as a double globally
 
         public static void main(String[] args) {
-            System.out.println(getName());
+            System.out.println("Hello " + getName());
             displayMenu();
             showSafeDrinkingTip();
 //            //calls the function to display the main menu and offer options to choose for the user
